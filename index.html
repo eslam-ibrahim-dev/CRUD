@@ -1,0 +1,107 @@
+<html>
+
+<head>
+
+    <title>Crud System</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+    <link rel="icon" href="Image/icon.png">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style-index.css">
+
+</head>
+
+<body>
+
+
+    <header class="Crud ">
+        <i class="fab fa-cuttlefish"></i>
+        <i class="far fa-registered"></i>
+        <i class="fab fa-uniregistry"></i>
+        <i class="fab fa-dyalog"></i>
+    </header>
+    <div>
+        <p class="text-center Headline">Product Store</p>
+    </div>
+    <section class="Productsinput w-75 mx-auto bg-white container rounded shadow py-5">
+        <div>
+            <div class="form-group">
+                <label>Product Name</label>
+                <span class="text-danger">*</span>
+                <input id="pName" required class="form-control my-2">
+                <div class="alert alert-danger d-none" id="nameAlert" role="alert">
+                    Product Name must start with capital letter and contains minimum 3 letters, Can't contain special
+                    characters
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Product Price</label>
+                <span class="text-danger">*</span>
+
+                <input id="pPrice" required class="form-control my-2">
+                <div class="alert alert-danger d-none" id="priceAlert" role="alert">
+
+                    Product Price must be in range 1000 : 50,000 (Numbers Only)
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Product Category</label>
+                <span class="text-danger">*</span>
+
+                <input id="pCategory" required class="form-control my-2">
+                <div class="alert alert-danger d-none" id="alertcat" role="alert">
+
+                    Product Category must contain Mobile,Tv or Laptop
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Product Description</label>
+                <span class="text-danger">*</span>
+
+                <textarea id="pDescription" required class="form-control my-2" row="2"></textarea>
+                <div class="alert alert-danger d-none" id="alertdesc" role="alert">
+
+                    Product Description must contain minimum 3 letters, Can't contain special characters
+
+                </div>
+            </div>
+            <div class="addbtn mt-5">
+                <button id="mybtn" onclick="addProduct()" class="btn text-white  mybtn rounded-circle p-3">Add
+                    Product</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white w-75 mx-auto rounded shadow my-4 p-5">
+        <input onkeyup='Search(this.value)' class="form-control w-50 mx-auto " placeholder="&#128269;Search Product...">
+        <div class="table-responsive mt-3">
+            <table class="table table-hover w-100  ">
+                <thead class="tcolor">
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Category</td>
+                        <td>Description</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody id="tbody" class="text-black"></tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/Mine.Js"></script>
+</body>
+
+</html>

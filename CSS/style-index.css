@@ -1,0 +1,27 @@
+.Crud
+{
+    background-color: teal;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 85px;
+    color: #fff;
+}
+.mybtn
+{
+  background-color: teal;
+}
+.tcolor
+{
+    background-color: teal;
+    color: #fff;
+}
+.addbtn
+{
+    text-align: center;
+}
+.Headline
+{
+    background-color: #e2dfdf;
+}
